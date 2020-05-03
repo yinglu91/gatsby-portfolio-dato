@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config(); // default: .env
 
 module.exports = {
   siteMetadata: {
@@ -15,4 +15,4 @@ module.exports = {
       },
     },
   ],
-}
+};
