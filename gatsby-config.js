@@ -1,4 +1,4 @@
-require('dotenv').config(); // default: .env
+require('dotenv').config() // default: .env
 
 module.exports = {
   siteMetadata: {
@@ -14,5 +14,6 @@ module.exports = {
         apiToken: process.env.DATO_API_TOKEN,
       },
     },
+    `gatsby-plugin-playground`,
   ],
-};
+}

@@ -22,6 +22,8 @@ exports.createPages = async ({ graphql, actions }) => {
     return
   }
 
+  // "slug": "poster-2"
+  // http://localhost:8000/works/poster-2
   result.data.allDatoCmsWork.edges.map(({ node }) => {
     createPage({
       path: `works/${node.slug}`,

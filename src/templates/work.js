@@ -5,6 +5,17 @@ import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
+const settings = {
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  speed: 6000,
+  autoplaySpeed: 6000,
+  cssEase: 'linear',
+}
+
 export default ({ data }) => (
   <Layout>
     <article className="sheet">
@@ -13,7 +24,7 @@ export default ({ data }) => (
         <h1 className="sheet__title">{data.datoCmsWork.title}</h1>
         <p className="sheet__lead">{data.datoCmsWork.excerpt}</p>
         <div className="sheet__slider">
-          <Slider infinite={true} slidesToShow={2} arrows>
+          <Slider {...settings}>
             {data.datoCmsWork.gallery.map(({ fluid }) => (
               <img
                 alt={data.datoCmsWork.title}
